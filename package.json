@@ -5,14 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "set NODE_ENV=developer& node index.js"
+    "dev": "set NODE_ENV=developer& nodemon index.js",
+    "start": "set NODE_ENV=production& node index.js"
   },
   "keywords": [],
   "author": "Steven",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
   },
   "devDependencies": {
     "cross-env": "^10.1.0"
