@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "aplicacion de hospital",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "set NODE_ENV=developer& node index.js"
   },
   "keywords": [],
   "author": "Steven",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
