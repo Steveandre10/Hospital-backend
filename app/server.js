@@ -2,15 +2,15 @@ import express from 'express';
 import config from './config/enviroments/index.js';
 import ruta from './routes/index.js';
 
-//INICIALIZAR
+// INICIALIZAR
 const server = express();
-
 
 server.set('PORT', config.PORT);
 
+// MIDDLEWARES
+server.use(express.json()); 
 
+// RUTAS
 server.use(ruta);
-
-
 
 export default server;

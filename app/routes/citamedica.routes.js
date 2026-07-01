@@ -1,18 +1,16 @@
+import {
+    eliminarCita, 
+    crearCita, 
+    actualizarCita, 
+    obtenerCitas
+} from '../controllers/cita.controllers.js';
 import {Router} from 'express';
 
 const route = Router();
 
-route.get('/', (req, res) => {
-    res.json({"Nombre": "Mariana"});
-});
-route.post('/', (req, res) => {
-    res.json({"Nombre": "Mariana"});
-});
-route.delete('/', (req, res) => {
-    res.json({"Nombre": "Mariana"});
-});
-route.patch('/', (req, res) => {
-    res.json({"Nombre": "Mariana"});
-});
+route.get('/', obtenerCitas);
+route.post('/', crearCita);
+route.patch('/', actualizarCita);
+route.delete('/', eliminarCita);
 
 export default route;
